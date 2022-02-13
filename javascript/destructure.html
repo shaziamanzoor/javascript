@@ -1,0 +1,44 @@
+
+<script>
+    //destructuring arrays
+    let a, b, rest;
+    [a, b] = [10, 20];
+    document.write("<p>Array destructuring</p>");
+    document.write(a);
+    document.write("<br>");
+    document.write(b);
+    document.write("<br>");
+
+    [a, b, ...rest]=[11, 12, 13, 14, 15, 16, 17];
+    document.write(rest);
+    document.write("<br>");
+
+    //destructuring of objects
+    ({ a, b } = {a: 29, b: 30});
+    document.write("<p>Object destructuring</p>");
+    document.writeln(a);
+    document.write("<br>");
+    document.write(b);
+    document.write("<br>");
+
+    ({a, b, ...res} = {a: 9, b: 5, c: 1, d: 0});
+    document.write(a);
+    document.write("<br>");
+    document.write(b);
+    document.write("<br>");
+    document.write("<p>rest of values</p>");
+    document.write(JSON.stringify(res));
+    document.write("<br>");
+
+    const x = [1, 2, 3, 4, 5];
+    const [y, z] = x;
+    console.log(y);
+    console.log(z);
+
+    const foo = ['one', 'two', 'three'];
+
+    const [red, yellow, green] = foo;
+    console.log(red); // "one"
+    console.log(yellow); // "two"
+    console.log(green); 
+</script>
