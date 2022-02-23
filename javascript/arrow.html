@@ -1,0 +1,47 @@
+<html>
+    <script>
+        const materials = ['Carbon','Hydrogen', 'Helium', 'Lithium', 'Radium', 'Mercury'];
+        console.log(materials.map(material=> material.length));
+
+        function add(a, b){
+            return a + b + 100;
+        }
+        console.log(add(2, 4));
+        
+        console.log(((c, d)=> c + d + 100)(5, 6));
+        
+        console.log(((a, b) => {
+            let num = 10;
+            return  a + b + num;
+        })(10, 10));
+
+        console.log(((a = 10, b = 2, c) => a * b)());
+        
+        //anonymous function
+        const num = [1, 2, 3, 4];
+        var myFunc = function (a){return a + 100};
+        console.log(myFunc(8));
+        
+       
+        //converting anonymous function to arrow functions
+        var myFuncArr = (a) =>  a + 100;
+        console.log(myFuncArr(2));
+         
+        //anonymous function with brackets
+        var myFunc1 = function(a, b){
+            let c = 23;
+            return a + b * c;
+        }
+        console.log("arrow function");
+        console.log(myFunc1(1,2));
+        
+        //arrow function with brackets
+        var myFuncArr1 = (a, b) => {
+            let c = 20;
+            return a + b + c;
+
+        }
+        console.log("arrow function with return");
+        console.log(myFuncArr1(1,2));
+    </script>
+</html>
