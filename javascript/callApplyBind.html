@@ -1,0 +1,31 @@
+<html>
+    <script>
+        const titanic ={ 
+            title : "Titanic",
+            producer: "James Cameron",
+            yearOfRelease: 1991,
+            getYearOfRelease() {
+                return this.yearOfRelease;
+            },
+            introduceProducer(message){
+                return this.producer + " " + message;
+            },
+        };
+        console.log(titanic.getYearOfRelease());
+        console.log(titanic.introduceProducer('has produced many movies'))
+        
+        const godFather = {
+            title : "God Father",
+            producer: "Albert S.Ruddy",
+            yearOfRelease: 1970,
+        };
+       // console.log(titanic.getYearOfRelease.call(godFather));
+       // console.log(titanic.introduceProducer.call(godFather,'is the greatest producer'));
+        console.log(titanic.getYearOfRelease.apply(godFather));
+        console.log(titanic.introduceProducer.apply(godFather, ['is the greatest producer']));
+        console.log(titanic.getYearOfRelease.bind(godFather));
+        const result = titanic.getYearOfRelease.bind(godFather);
+        const res = result.bind(titanic);
+        console.log(res());
+    </script>
+</html>

@@ -1,0 +1,78 @@
+<html>
+    <body>
+        <h2>Use of this keyword by example</h2>
+        <p>"this" referes to the person object</p>
+        <p id="demo"></p>    
+        <p id="demo1"></p> 
+        <p id="demo2"></p>
+    <script>
+        
+        /*creating an object in javascript
+        An object is a collection of related data and/or functionality.
+        These usually consist of several variables and functions
+        (which are called properties and methods when they are inside objects).
+        */
+        const person = {
+            firstName :"Bilal",
+            lastName :"Ahmed",
+            id : 2211,
+            class : ['9th', 'A'],
+            fullName : function() {
+                return this.firstName + " " + 
+                this.lastName + " " +
+                this.id;
+            },
+            getClass() {
+                return this.class[0] + " " + this.class[1];
+            },
+           
+        };
+        //display data from the object
+        document.getElementById("demo").innerHTML = person.fullName();
+        document.getElementById("demo1").innerHTML = person.getClass();
+        /*object property can 
+        itself be an object, array, 
+        a function(which i scalled object method*/
+        const person1 = {
+            prop: 4,
+            name: {
+                first: "Irfan",
+                last: 'Shah'
+            },
+
+            class : ['7th', 'A'],
+
+            getProp : function(){
+                return this.prop;
+            },
+            getName: function(){
+                return this.name['first'] + " " + this.name['last'];
+            },
+            getClass() {
+                return this.class[0] + " " + this.class[1];
+            },
+        };
+            document.getElementById("demo2").innerHTML = this.prop;
+            console.log(person1.prop);
+            
+            console.log(person1.name);
+            console.log(person1.name['first'] + " " + person1.name['last']);
+            
+            console.log(person1.class);
+            console.log(person1.class[0] + " " + person1.class[1]);
+           
+            console.log("Using methods");
+            console.log(person1.getProp());                  
+           
+            console.log(person1.getClass());
+            //this can't be used outside object method
+            //console.log(this.class[0]);
+            console.log(person1.getName());
+            //this can't be used here
+            //console.log(this.name['first']);
+            console.log(person1.name.first);
+    
+    </script>
+
+  </body>
+</html>   
